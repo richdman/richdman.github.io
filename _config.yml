@@ -112,6 +112,9 @@ jsonContent:
     categories: false
     tags: false
 
+# Comments
+disqus_shortname: sitecoresource 
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

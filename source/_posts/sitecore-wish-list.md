@@ -9,7 +9,7 @@ date: 04-09-2019
 ![sitecore angel](/images/wishlist/sitecore-angel.png "sitecore angel")
 
 This post is dedicated to a wishlist of what we would like to see from features to documentation and everything in between. 
-Please feel free to email me on <rdias@1digit.co.uk> if you want me to add something to this list, correct me or let me know if a wish has been granted.
+Please feel free to comment below or email me on <rdias@1digit.co.uk> if you want me to add something to this list, correct me or let me know if a wish has been granted.
 <!--more-->
 ---
 ## Features
