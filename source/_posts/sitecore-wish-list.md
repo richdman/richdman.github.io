@@ -23,6 +23,8 @@ Start thinking about:
 * SXA is out, we can start approving partial designs/ composites etc as a whole
 
 ### Media cropping OTB
+One of the biggest problems
+
 ### Personalisation with CDN
 At the moment Sitecore does all of its personalisation on the client side unless you start using some JSS functionality.
 If you're a client with a global presense (and there are a lot of these) who needs to cover more than one geographical region and don't want to spend large sums on a geographically distributed CD node system then you will most likely be using a CDN like Akamai, Cloudlare or any number of players.
