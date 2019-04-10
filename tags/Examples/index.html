@@ -297,6 +297,10 @@
   var SEARCH_SERVICE = "hexo";
   var ROOT = "/"||"/";
   if(!ROOT.endsWith('/'))ROOT += '/';
+  var host = "sitecoresource.com"
+  if (window.location.host == host && window.location.protocol != "https:") {
+  window.location.protocol = "https:"
+}
 </script>
 <script src="/js/search.js"></script>
 <script src="/js/app.js"></script>
