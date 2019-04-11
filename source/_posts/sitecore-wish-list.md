@@ -37,7 +37,7 @@ There is a nice tool in the marketplace now:
 * [Image field with cropping](https://marketplace.sitecore.net/Modules/I/ImageCropping.aspx?sc_lang=en "Image field with cropping Sitecore module"), this needs some tweaking for us to define a fixed/limited number of crops per site, otherwise it does a great job.
 
 #### DAM's (Digital Asset Management)
-There DAM integrations like [Digizuite](https://www.digizuite.com/digital-asset-management-for-sitecore "Digizuite sitecore integration") (which at the time of writing has the most complete DAM integration with Sitecore) and Sitecore has recently acquired [Stylelabs](https://www.sitecore.com/en-gb/company/press-and-media/press-releases/2018/10/sitecore-to-acquire-innovative-content-marketing-software-vendor-stylelabs "Sitecore aquires Stylelabs") (which will do the job). Both of these have cropping functionality (and much more), the problem is that that these are paid services and have a lot more functionality and a pricetag to match. 
+There are DAM integrations like [Digizuite](https://www.digizuite.com/digital-asset-management-for-sitecore "Digizuite sitecore integration") (which at the time of writing has the most complete DAM integration with Sitecore) and Sitecore has recently acquired [Stylelabs](https://www.sitecore.com/en-gb/company/press-and-media/press-releases/2018/10/sitecore-to-acquire-innovative-content-marketing-software-vendor-stylelabs "Sitecore aquires Stylelabs") (which will do the job). Both of these have cropping functionality (and much more), the problem is that that these are paid services and have a lot more functionality and a pricetag to match. 
 
 Sitecore should have a middle-ground solution that comes with the core platform.
 
