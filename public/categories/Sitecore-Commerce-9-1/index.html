@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Category: Sitecore Features | Sitecore Source</title>
+  <title>Category: Sitecore Commerce 9.1 | Sitecore Source</title>
   <meta name="description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
   <meta name="keywords" content>
   <meta name="HandheldFriendly" content="True">
@@ -15,7 +15,7 @@
   <meta name="description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sitecore Source">
-<meta property="og:url" content="http://sitecoresource.com/categories/Sitecore-Features/index.html">
+<meta property="og:url" content="http://sitecoresource.com/categories/Sitecore-Commerce-9-1/index.html">
 <meta property="og:site_name" content="Sitecore Source">
 <meta property="og:description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
 <meta property="og:locale" content="en-GB">
@@ -125,7 +125,7 @@
       <div class='l_main'>
         
   <script>
-    window.subData= { title:'Category : Sitecore Features'}
+    window.subData= { title:'Category : Sitecore Commerce 9.1'}
   </script>
 
 <section class="post-list">
@@ -135,49 +135,52 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2019/04/09/sitecore-wish-list/">
-        Sitecore wish list
+      <a href="/2019/04/17/sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues/">
+        Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)
       </a>
     </h2>
     
     <time>
-      Apr 9, 2019
+      Apr 17, 2019
     </time>
 		
     
     <div class="cats">
-        <a href="/categories/Sitecore-Features/">Sitecore Features</a>, <a href="/categories/Sitecore-Features/Sitecore/">Sitecore</a>
+        <a href="/categories/Sitecore-Commerce-9-1/">Sitecore Commerce 9.1</a>
     </div>
 
   </section>
   <section class="article typo">
-	  <p><img src="/images/wishlist/sitecore-angel.png" alt="sitecore angel" title="sitecore angel"></p>
-<p>This post is dedicated to a wishlist of what we would like to see from features to documentation and everything in between.<br>Please feel free to comment below or email me on <a href="mailto:&#114;&#x64;&#x69;&#x61;&#115;&#64;&#x31;&#100;&#105;&#103;&#x69;&#116;&#46;&#x63;&#111;&#46;&#x75;&#x6b;" target="_blank" rel="noopener">&#114;&#x64;&#x69;&#x61;&#115;&#64;&#x31;&#100;&#105;&#103;&#x69;&#116;&#46;&#x63;&#111;&#46;&#x75;&#x6b;</a> if you want me to add something to this list, correct me or let me know if a wish has been granted.<br>
+	  <p>The first thing to recommend is, use Viet Hoangs installation guides and his scrips, there are things like trusted itentity server certs which and needed for the commerce install that Sitecores default installation for 9.1.1 does not have:</p>
+<ul>
+<li><a href="https://buoctrenmay.com/2019/04/06/sitecore-xp-9-1-update-1-step-by-step-install-guide-on-your-machine/" title="Sitecore XP 9.1 Update 1 – Step by step Install Guide on your machine" target="_blank" rel="noopener">Sitecore XP 9.1 Update 1 – Step by step Install Guide on your machine</a> - first install SC 9.1 Update 1</li>
+<li><a href="https://buoctrenmay.com/2019/04/18/sitecore-commerce-9-1-initial-release-step-by-step-install-guide-on-your-machine/" title="Sitecore Commerce 9.1 Initial Release – Step by step Install Guide on your machine" target="_blank" rel="noopener">Sitecore Commerce 9.1 Initial Release – Step by step Install Guide on your machine</a></li>
+</ul>
+<h1 id="Sitecore-9-1-update-1-issues"><a href="#Sitecore-9-1-update-1-issues" class="headerlink" title="Sitecore 9.1 update 1 issues"></a>Sitecore 9.1 update 1 issues</h1><h2 id="Make-sure-your-license-xml-is-not-expired"><a href="#Make-sure-your-license-xml-is-not-expired" class="headerlink" title="Make sure your license.xml is not expired"></a>Make sure your license.xml is not expired</h2><p>You will see issues like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Install-SitecoreConfiguration : Failed to start service &apos;Sitecore XConnect Search Indexer -</span><br><span class="line">sc911.xconnect.local-IndexWorker (sc911.xconnect.local-IndexWorker)&apos;.</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/commerce-install/sc911_installissue.png" alt="Failed to start service" title="expired license file"></p>
+<p>Once the above error was sorted then I got the failiure below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Install-SitecoreConfiguration : Failed to start service &apos;Sitecore Marketing Automation Engine -</span><br><span class="line">sc911.xconnect.local-MarketingAutomationService (sc911.xconnect.local-MarketingAutomationService)&apos;.</span><br></pre></td></tr></table></figure>
+<p><img src="/images/commerce-install/sc911_installissue-marketting-nostart.png" alt="Failed to start marketting service" title="expired license file"></p>
+<p>Did and uninstall an reinstall and still no luck. It looks like a license file issue again, I made sure it’s the correct license, made sure all host entries and certs were deleted via the cert MMS and restarted the machine, kicked off the installation and everything worked this time!</p>
+<h1 id="Sitecore-9-1-Commerce-installation"><a href="#Sitecore-9-1-Commerce-installation" class="headerlink" title="Sitecore 9.1 Commerce installation"></a>Sitecore 9.1 Commerce installation</h1><h2 id="Make-sure-your-Identity-server-cert-is-trusted"><a href="#Make-sure-your-Identity-server-cert-is-trusted" class="headerlink" title="Make sure your Identity server cert is trusted"></a>Make sure your Identity server cert is trusted</h2><p>You need to make sure that you don’t see any SSL validation error when navigating to the https:// URL of your identity server. If you have an error, then go back to you SC 9.1 Update 1 install and sort this out first.</p>
+<p>If you’re seeing this, then your commerce installation will not complete:<br><img src="/images/commerce-install/identitty-server-notrust-snip.png" alt="Sitecore identity server not trusted" title="Sitecore identity server not trusted"><br>Make sure the SSL cert is trusted:<br><img src="/images/commerce-install/identitty-server-trusted.png" alt="Sitecore identity server is trusted" title="Sitecore identity server is trusted"></p>
+<h2 id="How-long-does-the-install-take-to-complate"><a href="#How-long-does-the-install-take-to-complate" class="headerlink" title="How long does the install take to complate?"></a>How long does the install take to complate?</h2><p>It took my i7 18GB RAM SSD laptop almost an hour to complete:<br><img src="/images/commerce-install/sc911_success.png" alt="Installation time for commerce" title="Installation time for commerce"></p>
 
-    
-	  <div class="readmore">
-      <a href="/2019/04/09/sitecore-wish-list/">Read More</a>
-    </div>
+
     
     
     
 	  <div class="full-width auto-padding tags">
       
-        <a href="/tags/Sitecore/">Sitecore</a>
+        <a href="/tags/Sitecore-Commerce-9-1/">Sitecore Commerce 9.1</a>
       
-        <a href="/tags/Documentation/">Documentation</a>
+        <a href="/tags/Sitecore-Commerce-Install/">Sitecore Commerce Install</a>
       
-        <a href="/tags/Development/">Development</a>
-      
-        <a href="/tags/Examples/">Examples</a>
-      
-        <a href="/tags/Personalisation/">Personalisation</a>
-      
-        <a href="/tags/DAM/">DAM</a>
+        <a href="/tags/Sitecore-9-1-Update-1/">Sitecore 9.1 Update 1</a>
       
 	  </div>
     
-  </p></section>
+  </section>
 </article>
     </div>
   

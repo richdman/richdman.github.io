@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Archives: 2019 | Sitecore Source</title>
+  <title>Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1) | Sitecore Source</title>
   <meta name="description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
   <meta name="keywords" content>
   <meta name="HandheldFriendly" content="True">
@@ -12,16 +12,24 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="Sitecore Source">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sitecore Source">
-<meta property="og:url" content="http://sitecoresource.com/archives/2019/index.html">
+  <meta name="description" content="The first thing to recommend is, use Viet Hoangs installation guides and his scrips, there are things like trusted itentity server certs which and needed for the commerce install that Sitecores defaul">
+<meta name="keywords" content="Sitecore Commerce 9.1,Sitecore Commerce Install,Sitecore 9.1 Update 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)">
+<meta property="og:url" content="http://sitecoresource.com/2019/04/17/sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues/index.html">
 <meta property="og:site_name" content="Sitecore Source">
-<meta property="og:description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
+<meta property="og:description" content="The first thing to recommend is, use Viet Hoangs installation guides and his scrips, there are things like trusted itentity server certs which and needed for the commerce install that Sitecores defaul">
 <meta property="og:locale" content="en-GB">
+<meta property="og:image" content="http://sitecoresource.com/images/commerce-install/sc911_installissue.png">
+<meta property="og:image" content="http://sitecoresource.com/images/commerce-install/sc911_installissue-marketting-nostart.png">
+<meta property="og:image" content="http://sitecoresource.com/images/commerce-install/identitty-server-notrust-snip.png">
+<meta property="og:image" content="http://sitecoresource.com/images/commerce-install/identitty-server-trusted.png">
+<meta property="og:image" content="http://sitecoresource.com/images/commerce-install/sc911_success.png">
+<meta property="og:updated_time" content="2019-04-23T15:13:08.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sitecore Source">
-<meta name="twitter:description" content="A Sitecore blog dedicated to perfomance, scaling and other technical goodies with Sitecore">
+<meta name="twitter:title" content="Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)">
+<meta name="twitter:description" content="The first thing to recommend is, use Viet Hoangs installation guides and his scrips, there are things like trusted itentity server certs which and needed for the commerce install that Sitecores defaul">
+<meta name="twitter:image" content="http://sitecoresource.com/images/commerce-install/sc911_installissue.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -123,36 +131,30 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
+        <article id="post-sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues" class="post white-box article-type-post" itemscope itemprop="blogPost">
+	<section class="meta">
+	<h2 class="title">
+  	<a href="/2019/04/17/sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues/">
+    	Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)
+    </a>
+  </h2>
+	<time>
+	  Apr 17, 2019
+	</time>
 	
-  <script>
-    window.subData= { title:'Year : 2019'}
-  </script>
-
-<section class="post-list">
-	
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/04/17/sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues/">
-        Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)
-      </a>
-    </h2>
-    
-    <time>
-      Apr 17, 2019
-    </time>
-		
     
     <div class="cats">
         <a href="/categories/Sitecore-Commerce-9-1/">Sitecore Commerce 9.1</a>
     </div>
-
-  </section>
-  <section class="article typo">
-	  <p>The first thing to recommend is, use Viet Hoangs installation guides and his scrips, there are things like trusted itentity server certs which and needed for the commerce install that Sitecores default installation for 9.1.1 does not have:</p>
+	
+	</section>
+	
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Sitecore-9-1-update-1-issues"><span class="toc-number">1.</span> <span class="toc-text">Sitecore 9.1 update 1 issues</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Make-sure-your-license-xml-is-not-expired"><span class="toc-number">1.1.</span> <span class="toc-text">Make sure your license.xml is not expired</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sitecore-9-1-Commerce-installation"><span class="toc-number">2.</span> <span class="toc-text">Sitecore 9.1 Commerce installation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Make-sure-your-Identity-server-cert-is-trusted"><span class="toc-number">2.1.</span> <span class="toc-text">Make sure your Identity server cert is trusted</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-long-does-the-install-take-to-complate"><span class="toc-number">2.2.</span> <span class="toc-text">How long does the install take to complate?</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>The first thing to recommend is, use Viet Hoangs installation guides and his scrips, there are things like trusted itentity server certs which and needed for the commerce install that Sitecores default installation for 9.1.1 does not have:</p>
 <ul>
 <li><a href="https://buoctrenmay.com/2019/04/06/sitecore-xp-9-1-update-1-step-by-step-install-guide-on-your-machine/" title="Sitecore XP 9.1 Update 1 – Step by step Install Guide on your machine" target="_blank" rel="noopener">Sitecore XP 9.1 Update 1 – Step by step Install Guide on your machine</a> - first install SC 9.1 Update 1</li>
 <li><a href="https://buoctrenmay.com/2019/04/18/sitecore-commerce-9-1-initial-release-step-by-step-install-guide-on-your-machine/" title="Sitecore Commerce 9.1 Initial Release – Step by step Install Guide on your machine" target="_blank" rel="noopener">Sitecore Commerce 9.1 Initial Release – Step by step Install Guide on your machine</a></li>
@@ -167,11 +169,9 @@
 <p>If you’re seeing this, then your commerce installation will not complete:<br><img src="/images/commerce-install/identitty-server-notrust-snip.png" alt="Sitecore identity server not trusted" title="Sitecore identity server not trusted"><br>Make sure the SSL cert is trusted:<br><img src="/images/commerce-install/identitty-server-trusted.png" alt="Sitecore identity server is trusted" title="Sitecore identity server is trusted"></p>
 <h2 id="How-long-does-the-install-take-to-complate"><a href="#How-long-does-the-install-take-to-complate" class="headerlink" title="How long does the install take to complate?"></a>How long does the install take to complate?</h2><p>It took my i7 18GB RAM SSD laptop almost an hour to complete:<br><img src="/images/commerce-install/sc911_success.png" alt="Installation time for commerce" title="Installation time for commerce"></p>
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/tags/Sitecore-Commerce-9-1/">Sitecore Commerce 9.1</a>
       
@@ -181,65 +181,60 @@
       
 	  </div>
     
-  </section>
-</article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/04/09/sitecore-wish-list/">
-        Sitecore wish list
-      </a>
-    </h2>
-    
-    <time>
-      Apr 9, 2019
-    </time>
 		
-    
-    <div class="cats">
-        <a href="/categories/Sitecore-Features/">Sitecore Features</a>, <a href="/categories/Sitecore-Features/Sitecore/">Sitecore</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p><img src="/images/wishlist/sitecore-angel.png" alt="sitecore angel" title="sitecore angel"></p>
-<p>This post is dedicated to a wishlist of what we would like to see from features to documentation and everything in between.<br>Please feel free to comment below or email me on <a href="mailto:&#114;&#x64;&#x69;&#x61;&#115;&#64;&#x31;&#100;&#105;&#103;&#x69;&#116;&#46;&#x63;&#111;&#46;&#x75;&#x6b;" target="_blank" rel="noopener">&#114;&#x64;&#x69;&#x61;&#115;&#64;&#x31;&#100;&#105;&#103;&#x69;&#116;&#46;&#x63;&#111;&#46;&#x75;&#x6b;</a> if you want me to add something to this list, correct me or let me know if a wish has been granted.<br>
-
-    
-	  <div class="readmore">
-      <a href="/2019/04/09/sitecore-wish-list/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Sitecore/">Sitecore</a>
-      
-        <a href="/tags/Documentation/">Documentation</a>
-      
-        <a href="/tags/Development/">Development</a>
-      
-        <a href="/tags/Examples/">Examples</a>
-      
-        <a href="/tags/Personalisation/">Personalisation</a>
-      
-        <a href="/tags/DAM/">DAM</a>
-      
-	  </div>
-    
-  </p></section>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2019/04/09/sitecore-wish-list/" rel="next" title="Sitecore wish list">
+						Sitecore wish list
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
 </article>
-    </div>
-  
-</section>
-
-
-
+<script>
+	window.subData = {
+		title: 'Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)',
+		tools: true
+	}
+</script>
+<!-- JSON-LD markup generated by Google Structured Data Markup Helper. -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)",
+      "headline" : "Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)",      
+      "author" : {
+        "@type" : "Person",
+        "name" : "Richard Dias",
+        "sameAs": ["https://www.linkedin.com/in/richardsitecore/"]
+      },
+      "datePublished" : "Wed Apr 17 2019 13:35:41 GMT+0100",
+      "dateModified" : "Wed Apr 17 2019 13:35:41 GMT+0100",
+      "image" : "http://sitecoresource.comundefined",
+      "url" : "http://sitecoresource.com/2019/04/17/sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues/",
+      "publisher" : {
+        "@type": "Organization",
+          "name":"Sitecoresource.com",
+          "url":"http://sitecoresource.com",
+          "logo":{
+                "@type":"ImageObject",
+                 "url":"http://sitecoresource.com/images/logo.jpg",
+                 "contentUrl":"http://sitecoresource.com/images/logo.jpg",
+                 "width":"327",
+                 "height":"196"
+                  }
+      }
+    }
+    </script>
       </div>
       <aside class='l_side'>
         
@@ -328,11 +323,13 @@
 <script>
   var disqus_shortname = 'sitecoresource';
   
+  var disqus_url = 'http://sitecoresource.com/2019/04/17/sitecore-xp-9-1-update-1-and-sitecore-commerce-9-1-installation-issues/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
