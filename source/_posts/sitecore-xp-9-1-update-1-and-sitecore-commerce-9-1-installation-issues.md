@@ -1,5 +1,5 @@
 ---
-title: Some issued and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)
+title: Some issues and solutions I faced when installing Sitecore commerce 9.1 with Sitecore 9.1.1 (9.1 Update 1)
 date: 2019-04-17 13:35:41
 categories: [Sitecore Commerce 9.1]
 tags: [Sitecore Commerce 9.1, Sitecore Commerce Install, Sitecore 9.1 Update 1]
